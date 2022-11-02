@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>CHANIA ONLINE BOOK STORE</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       
+        <div class="container">
+          <div class="card" >
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form action="home.html"> 
+                        <input type="email" class="input-box" placeholder="your email Id"required>
+                        <input type="password" class="input-box" placeholder="password"required>
+                        <button type="login" class="login-btn">Login</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()">I'm new here</buStton>
+                    <a href="">Forgot password</a>
+                </div>
+                    <div class="card-back">
+                    <h2>REGISTER</h2>
+                    <form>
+                        <div class="input-group">
+                        <input type="text" class="input-box" placeholder="first name" id="contact-name" onkeyup="validateName()">
+                         <span id="name-error"></span>
+                        </div>
+                        <div>
+                        <input type="text" class="input-box" placeholder="last name"required>
+                        <span id="name-error"></span>
+                        </div>
+                        <div class="input-group">
+                        <input type="tel" class="input-box" placeholder="phone number" id="contact-phone" onkeyup="validatePhone()">
+                        <span id="phone-error"></span>
+                        </div>
+                        <div class="input-group">
+                        <input type="email" class="input-box" placeholder="your email Id" id="contact-email" onkeyup="validateEmail()">
+                        <span id="email-error"></span>
+                        </div>
+                        <div class="input-group">
+                        <input type="password" class="input-box" placeholder="password" id="contact-password" onkeyup="validatePassword">
+                        <span id="password-error"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">submit</button>
+                        <span id="submit-error"></span>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I have an account</button>
+                    <a href="">Forgot password</a>
+            </div>
+            </div>
+          </div> 
+        </div>
+        <!---javascript-->
+        <script>
+        var card = document.getElementById("card");
+        function openRegister(){
+            card.style.transform = "rotateY(-180deg)";
+        }
+        function openLogin() {
+          card.style.transform = "rotateY(0deg)"; 
+        }
+        var nameError = document.getElementById('name-error');
+var phoneError = document.getElementById('phone-error');
+var emailError = document.getElementById('email-error');
+var passwordError = document.getElementById('password-error');
+var submitError = document.getElementById('submit-error');
+
+function validateName(){
+    var name = document.getElementById('contact-name').Value;
+
+    if(name.length == 0){
+        nameError.innerHTML = 'first name required';
+        return false;
+    }
+    if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*&/)){
+        nameError.innerHTML = 'write first name';
+        return false;
+    }
+    nameError.innerHTML = 'valid'
+    return true;
+}
+
+function validatePhone(){
+    var phone = document.getElementById('contact-phone').Value;
+
+    if(phone.length == 0){
+        phoneError.innerHTML = 'phone number required';
+        return false;
+    }
+    if(phone.length !== 10){
+        phoneError.innerHTML = 'phone number is 10 digits';
+        return false;
+    }
+    if(!phone.match(/^[0-9]{10}$/)){
+        phoneError.innerHTML ='only digits';
+        return false;
+    }
+
+    phoneError.innerHTML = 'valid';
+    return true; 
+}
+function validateEmail(){
+    var email = document.getElementById('contact-email').Value;
+    
+    if(email.length == 0){
+        emailError.innerHTML = 'email required';
+        return false;
+    }
+    if(!email.match(/^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        emailError.innerHTML= 'email Invalid';
+        return false;
+    }
+
+    emailError.innerHTML = 'valid';
+    return true;
+}
+
+function validatePassword(){
+    var password = document.getElementById('contact-password').Value;
+
+    if(password.length == 0){
+        passwordError.innerHTML = 'password required';
+        return false;
+    }
+    if(password.length !== 10){
+        passwordError.innerHTML = 'password is 10 digits';
+        return false;
+    }
+    if(!password.match(/^[0-9]{10}$/)){
+        passwordError.innerHTML ='only digits';
+        return false;
+    }
+
+    passwordError.innerHTML = 'valid';
+    return true; 
+}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>CHANIA ONLINE BOOK STORE</title>
+    
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="header">
+           <nav>
+             <div class="nav-links" id="navlinks">
+                <i class="fa fa-times"onclick="hideMenu()"></i>
+                <Ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="reviews.html">REVIEWS</a></li>
+                    <li><a href="login.html">ACCOUNT</a></li>
+                </Ul>
+            </div>
+            <i class="fa fa-times"onclick="showMenu()"></i>
+           </nav>
+           <div class="text-box">
+            <h1>CONTACT US</h1>
+            <!--contact-->
+            <section class="contacts">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127653.07272008446!2d37.023412636417184!3d-1.
+                042011471602146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                1!3m3!1m2!1s0x182f4e5b27c66117%3A0xb6f8a7e126152c26!2sThika!5e0!3m2!1sen!2ske!4v1666186124055!5m2!1sen!2ske"
+                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section class="contact-us">
+                <div class="row">
+                   <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>kenyatta road,chania Building</h5>
+                            <p>Thika, Bluepost</p>
+                        </span>
+                        
+                    </div>
+                   <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+254 726456757</h5>
+                        <p>Monday to Saturday, 10AM to 6PM</p>
+                    </span>
+                   </div>
+                   <div>
+                    <i class="fa fa-envelope"></i>
+                    <span>
+                        <h5>starvuritsab@gmail.com</h5>
+                        <p>Email us your query</p>
+                    </span>
+                   </div>
+                   </div>
+                   <div class="contact-col">
+                    <form action="form handler.php" method="post" onsubmit="sendEmail(); reset(); return false;">
+                        <input type="text" name="name"placeholder="Enter your name" required>
+                        <input type="email" name="email"placeholder="Enter email address" required>
+                        <input type="tel" name="phone number" placeholder="phone number" required>
+                        <textarea  rows="8" name="message"  placeholder="message" required></textarea>
+                        <button type="submit" class="hero-btn red-btn">send message</button>
+                    </form>
+                   </div>
+                </div>
+            </section>
+        <!--footers-->
+        <section class="footers">
+            <h4>About Us</h4>
+            <p> Chania online bookstore is a website that was designed to help readers who cant<br> physically
+                access the store to read by downloading and signing in in the website<br> we offer a variety 
+                of books from educational,spiritual,physchological,storybooks and many more books.
+            </p>
+                <div class="icons">
+                    <img src="images/fb.jpg">
+                    <img src="images/in.jpg">
+                    <img src="images/tw.jpg">
+                    <img src="images/ws.jpg">
+                </div>
+                <p>Made by Starvuritsa Buhungi</p>
+        </section>
+       <!--javascriptfor toogle menu-->
+       <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            var navlinks=document.getElementById("navlinks");
+            function showMenu(){
+                navlinks.style.right="0";
+            }
+            function hideMenu(){
+                navlinks.style.right="-200px";
+            }
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "username",
+                    Password : "password",
+                    To : 'them@website.com',
+                    From : document.getElementById("email").value,
+                    Subject : "This is the subject",
+                    Body : "Name: " + document.getElementById("name").value
+                         + "<br> Email: " + document.getElementById("email").value
+                         + "<br> Phone number: " + document.getElementById("phone number").value
+                         + "<br> message: " + document.getElementById("message").value
+                }).then(
+                    message => alert("Message Sent Succesfully")
+                );
+            }
+        </script>
+    </body>
+</html>

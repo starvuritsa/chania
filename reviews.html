@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>CHANIA ONLINE BOOK STORE</title>
+    
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="header">
+           <nav>
+             <div class="nav-links" id="navlinks">
+                <i class="fa fa-times"onclick="hideMenu()"></i>
+                <Ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="reviews.html">REVIEWS</a></li>
+                    <li><a href="login.html">ACCOUNT</a></li>
+                </Ul>
+            </div>
+            <i class="fa fa-times"onclick="showMenu()"></i>
+           </nav>
+           <div class="text-box">
+            <h1>REVIEWS</h1>
+            <p> Kindly submit your reviews about our website and services</p>
+            <section class="reviews">
+                <p> Kindly submit your reviews about our website and services</p>
+                <div class="contact-col">
+                    <form action="form handler.php" method="post">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter email address" required>
+                        <input type="text" name="book name" placeholder="Enter book name" required>
+                        <textarea  rows="8" name="comments"  placeholder="comments" required></textarea>
+                        <button type="submit" class="hero-btn red-btn">send comments</button>
+                    </form>
+                   </div>
+            </section>
+            
+        
+        <!--footers-->
+        <section class="footers">
+            <h4>About Us</h4>
+            <p> Chania online bookstore is a website that was designed to help readers who cant<br> physically
+                access the store to read by downloading and signing in in the website<br> we offer a variety 
+                of books from educational,spiritual,physchological,storybooks and many more books.
+            </p>
+                <div class="icons">
+                    <img src="images/fb.jpg">
+                    <img src="images/in.jpg">
+                    <img src="images/tw.jpg">
+                    <img src="images/ws.jpg">
+                </div>
+                <p>Made by Starvuritsa Buhungi</p>
+        </section>
+       <!--javascriptfor toogle menu-->
+        <script>
+            var navlinks=document.getElementById("navlinks");
+            function showMenu(){
+                navlinks.style.right="0";
+            }
+            function hideMenu(){
+                navlinks.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>

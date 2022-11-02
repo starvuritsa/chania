@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>CHANIA ONLINE BOOK STORE</title>
+    
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+              <div class="nav-links" id="navlinks">
+                 <i class="fa fa-times"onclick="hideMenu()"></i>
+                 <Ul>
+                     <li><a href="home.html">HOME</a></li>
+                     <li><a href="featured.html">FEATURED</a></li>
+                     <li><a href="contact.html">CONTACT</a></li>
+                     <li><a href="reviews.html">REVIEWS</a></li>
+                     <li><a href="login.html">ACCOUNT</a></li>
+ 
+                 </Ul>
+             </div>
+             <i class="fa fa-times"onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+             <h1>CHANIA ONLINE BOOKSTORE</h1>
+             <P>Reading hsas been made easier throuh websites that are available online. Chania online bookstore<br>
+                  provides you with a variety of different books in our website to helps you by making it easier to read and make notes. </P>
+                  <a href="featured.html" class="hero-btn">featured
+                     <form action="featured.html" class="passform" onsubmit="passcheck()">
+                         password:<input type="password" required id="pas1">
+                         <input type="submit">
+                     </form>
+                  </a>
+            </div> 
+         </section>
+           <div class="text-box">
+            <h1>FEATURED</h1>
+            <section class="books">
+                <h1>Sample books</h1>
+                <p> These are some of our books on the shelves</p>
+                <div class="row">
+                  <div class="books-col">
+                      <img src="images/im1.jpg">
+                      <h3>Diary of a Wimpy kid</h3>
+                  </div>
+                  <div class="row">
+                      <div class="books-col">
+                          <img src="images/im5.jpg">
+                         <h3>Dreaming of you</h3>
+
+                      </div>
+                      <div class="row">
+                          <div class="books-col">
+                              <img src="images/im2.jpg">
+                              <h3>The girl of ink and stars</h3>
+                            
+                          </div>
+                          <div class="row">
+                            <div class="books-col">
+                                <img src="images/im3.jpg">
+                                <h3>The Silent patient</h3>
+                                                         </div>
+                            <div class="row">
+                                <div class="books-col">
+                                    <img src="images/im4.jpg">
+                                    <h3>The Last bear</h3>
+                                    
+                                </div>
+                </div>
+          </section>
+            
+        <!--footers-->
+        <section class="footers">
+            <h4>About Us</h4>
+            <p> Chania online bookstore is a website that was designed to help readers who cant<br> physically
+                access the store to read by downloading and signing in in the website<br> we offer a variety 
+                of books from educational,spiritual,physchological,storybooks and many more books.
+            </p>
+                <div class="icons">
+                    <img src="images/fb.jpg">
+                    <img src="images/in.jpg">
+                    <img src="images/tw.jpg">
+                    <img src="images/ws.jpg">
+                </div>
+                <p>Made by Starvuritsa Buhungi</p>
+        </section>
+       <!--javascriptfor toogle menu-->
+        <script>
+            var navlinks=document.getElementById("navlinks");
+            function showMenu(){
+                navlinks.style.right="0";
+            }
+            function hideMenu(){
+                navlinks.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>

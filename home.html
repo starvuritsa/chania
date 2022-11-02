@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>CHANIA ONLINE BOOK STORE</title>
+    
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="header">
+           <nav>
+             <div class="nav-links" id="navlinks">
+                <i class="fa fa-times"onclick="hideMenu()"></i>
+                <Ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="featured.html">FEATURED</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="reviews.html">REVIEWS</a></li>
+                    <li><a href="login.html">ACCOUNT</a></li>
+
+                </Ul>
+            </div>
+            <i class="fa fa-times"onclick="showMenu()"></i>
+           </nav>
+           <div class="text-box">
+            <h1>CHANIA ONLINE BOOKSTORE</h1>
+            <P>Reading hsas been made easier throuh websites that are available online. Chania online bookstore<br>
+                 provides you with a variety of different books in our website to helps you by making it easier to read and make notes. </P>
+                 <a href="featured.html" class="hero-btn">featured
+                    <form action="featured.html" class="passform" onsubmit="passcheck()">
+                        password:<input type="password" required id="pas1">
+                        <input type="submit">
+                    </form>
+                 </a>
+           </div> 
+        </section>
+        <!--feautred books-->
+        <section class="featured">
+           <h1>FEATURED BOOKS</h1>
+           <P>These are the books in our store</P>
+           <div class="row">
+            <div class="featured-col">
+                <h3>intermidiate</h3>
+                <p>we offer our books at a discount to students and our loyal customers.<br>our books are available at any given
+                time and day</p>
+            </div>
+            <div class="featured-col">
+                <h3>children</h3>
+                <p>we offer our books at a discount to students and our loyal customers.<br>our books are available at any given
+                time and day</p>
+            </div>
+            <div class="featured-col">
+                <h3>adults</h3>
+                <p>we offer our books at a discount to students and our loyal customers.<br>our books are available at any given
+                time and day</p>
+            </div>
+           </div>
+        </section>
+        <!--chania store-->
+        <section class="chania">
+           <h1> Our Main Store</h1>
+           <p> our main store is in thika, chania</p>
+           <div class="row">
+            <div class="chania-col">
+                <img src="images/hm3.jpg" alt="">
+                <div class="layer">
+                    <h3>LIBRARY</h3>
+                </div>
+            </div>
+            <div class="chania-col">
+                <img src="images/hm2.jpg" alt="">
+                <div class="layer">
+                    <h3>STORYBOOK</h3>
+                </div>
+           </div>
+           <div class="chania-col">
+            <img src="images/hm5.jpg" alt="">
+            <div class="layer">
+                <h3>FANTASY</h3>
+            </div>
+            </div>
+        </section>
+        <!--books-->
+        <section class="books">
+              <h1>Sample books</h1>
+              <p> These are some of our books on the shelves</p>
+              <div class="row">
+                <div class="books-col">
+                    <img src="images/im1.jpg">
+                    <h3>Diary of a Wimpy kid</h3>
+                    <p> used for lullabies and teaching children</p>
+                </div>
+                <div class="row">
+                    <div class="books-col">
+                        <img src="images/im5.jpg">
+                        <h3>Silent patient</h3>
+                        <p> it is a physchological book</p>
+                    </div>
+                    <div class="row">
+                        <div class="books-col">
+                            <img src="images/im2.jpg">
+                            <h3>The girl of ink and stars</h3>
+                            <p> suitable for adults </p>
+                        </div>
+              </div>
+        </section>
+        <!--testimonials-->
+        <section class="testimonials">
+               <h1>What our readers says</h1>
+               <p>These is some of our readers comments</p>
+               <div class="row">
+                <div class="testimonials-col">
+                   <img src="images/mn1.jpg">
+                   <div>
+                    <p>I love most of the books in the website they are
+                        educational and entertaining they are superb
+                    </p>
+                    <h3>Mike Ruby</h3>
+                   </div>
+                </div>
+                <div class="testimonials-col">
+                    <img src="images/wm2.jpg">
+                    <div>
+                     <p>I love most of the books in the website they are
+                         educational and entertaining they are superb
+                     </p>
+                     <h3>Catherine Kit</h3>
+                     <i class="fa fa-star"></i>
+                     </div>
+               </div>
+        </section>
+        <!--call to action-->
+        <section class="cta">
+            <h1>Enroll for our various online reading sessions in <br>the website or at 
+                our offices at chania</h1>
+            <a href="contact.html" class="hero-btn">CONTACT US</a>
+        </section>
+        <!--footers-->
+        <section class="footers">
+            <h4>About Us</h4>
+            <p> Chania online bookstore is a website that was designed to help readers who cant<br> physically
+                access the store to read by downloading and signing in in the website<br> we offer a variety 
+                of books from educational,spiritual,physchological,storybooks and many more books.
+            </p>
+                <div class="icons">
+                    <img src="images/fb.jpg">
+                    <img src="images/in.jpg">
+                    <img src="images/tw.jpg">
+                    <img src="images/ws.jpg">
+                </div>
+                <p>Made by Starvuritsa Buhungi</p>
+        </section>
+       <!--javascriptfor toogle menu-->
+        <script src="script.js"></script>
+    </body>
+</html>
